@@ -1,0 +1,38 @@
+* {
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  height: 100vh;
+}
+.keypad {
+  display: flex;
+  border: 2px solid black;
+  width: 100vw;
+}
+.key-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  width: 17.9vw;
+}
+
+#equals {
+  width: 44%;
+}
+
+#reset {
+  width: 44%;
+}
+
+.head {
+  width: 90%;
+}
+
+.attribution {
+  margin-top: 10px;
+}
