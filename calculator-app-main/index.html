@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -12,84 +11,99 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Tip calculator app</title>
-
-    <!-- Font -->
-
+    <!-- google-fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" media="screen and (max-width:900px" href="mobile.css">
+    <title>Frontend Mentor | Calculator app</title>
+    <!-- styles -->
+    <link class="theme" rel="stylesheet" href="style-dark.css" />
+    <link
+      rel="stylesheet"
+      href="phone.css"
+      media="only screen and (max-width: 800px)"
+    />
+    <link
+      rel="stylesheet"
+      href="phone-300.css"
+      media="only screen and (max-width: 320px)"
+    />
   </head>
   <body>
-    <div class="logo"><img class = "logo-image" src="images/logo.svg" alt="" /></div>
-    <section class="app">
-      <div class="container">
-        <div class="left">
-          <div class="bill-section">
-            <div class="section-name">
-              <h5 class="names">Bill</h5>
-            </div>
-            <input type="number" class="bill-input"/>
-           </div>
-          <div class="no-of-people-section">
-            <div class="section-name"><h5 class = "names">No of People</h5><p class= "ifZero">Cannot be zero</p></div>
-            <input type="number" class="people-input" />
-          </div>
-          <div class="tip-section">
-            <div class="section-name tip"><h5 class = "names">Select Tip %</h5></div>
-            <div class="tip-button-section">
-              <div class="tip-button"><button value = "5">5%</button></div>
-              <div class="tip-button"><button value="10">10%</button></div>
-              <div class="tip-button"><button value="15">15%</button></div>
-              <div class="tip-button"><button value="25">25%</button></div>
-              <div class="tip-button"><button value="50">50%</button></div>
-              <div class="tip-input">
-                <input type="number" id="custom" placeholder="Custom" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="total-tip">
-            <h4>
-              Total Tip
-              <p>/person</p>
-            </h4>
-          </div>
-          <div class="tip-result">
-            <h3 class="total-tip-amount result">$0.00</h3>
-          </div>
-          <div class="total">
-            <h4>
-              Total
-              <p>/person</p>
-            </h4>
-            </div>
-            <div class ="amount-result">
-              <h3 class="total-amount result">$0.00</h3>
-            </div>
-            <div class="reset">
-              <button class="reset-button">Reset</button>
-            </div>
-          </div>
+    <div class="head">
+      <p>calc</p>
+      <div class="o-switch btn-group">
+        <p>THEME</p>
+        <div class="toggle">
+          <label class="button btn-secondary active">
+            <input
+              class="dark"
+              type="radio"
+              name="options"
+              id="option1"
+              autocomplete="off"
+              checked
+            />
+          </label>
+          <label class="button btn-secondary">
+            <input
+              class="light"
+              type="radio"
+              name="options"
+              id="option2"
+              autocomplete="off"
+            />
+          </label>
+          <label class="button btn-secondary">
+            <input
+              class="purple"
+              type="radio"
+              name="options"
+              id="option3"
+              autocomplete="off"
+            />
+          </label>
         </div>
       </div>
-    </section>
-      <script src="index.js"></script>
     </div>
+
+    <div class="container">
+      <div class="display-container"><p class="display">0</p></div>
+
+      <section>
+        <div class="key-container">
+          <div class="keypad">
+            <button class="btn" id="7">7</button>
+            <button class="btn" id="8">8</button>
+            <button class="btn" id="9">9</button>
+            <button class="btn" id="del">del</button>
+            <button class="btn" id="4">4</button>
+            <button class="btn" id="5">5</button>
+            <button class="btn" id="6">6</button>
+            <button class="btn" id="+">+</button>
+            <button class="btn" id="1">1</button>
+            <button class="btn" id="2">2</button>
+            <button class="btn" id="3">3</button>
+            <button class="btn" id="-">-</button>
+            <button class="btn" id=".">.</button>
+            <button class="btn" id="0">0</button>
+            <button class="btn" id="/">/</button>
+            <button class="btn" id="*">x</button>
+            <button class="btn" id="reset">reset</button>
+            <button class="btn equals-btn" id="equals">=</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Samarth Hegde</a>.
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
